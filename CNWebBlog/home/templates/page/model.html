@@ -1,0 +1,15 @@
+{% extends 'page/base.html' %}
+
+{% block title %}Model{% endblock %}
+{% block content %}
+<h4> Mô hình dự đoán giá gạo dựa trên LSTM </h4>
+<h5> dữ liệu giá gạo có 193 ngày(từ 1/12/2023 đến ngày 13/6/2023)</h5>
+<ul>
+<li>đường red là giá thực trong 6 tháng</li>
+<li>đường green là giá train trong 150, lấy 20 ngày đầu để train cho ngày tiếp theo</li>
+<li>đường blue là giá test trong 43 ngày</li>
+</ul>
+<h7>Độ phù hợp tập train là 74%</h7>
+<br>
+<img src="/media/Screen_Shot_2023-06-19_at_22.35.50.png",class="float-left">
+{%endblock%}

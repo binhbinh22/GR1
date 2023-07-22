@@ -1,0 +1,50 @@
+{% extends 'page/base.html' %}
+{% block title %}Tin tức{% endblock %}
+
+{% block content %}
+    <ul>
+    {% for item in page_obj %}
+        <li>
+            <h5><a href="{{ item.2 }}">{{ item.0 }}</a></h5>
+            <p>Point: {{ item.1 }}</p>
+            <p>Time: {{ item.3 }}</p>
+        </li>
+    {% endfor %}
+    </ul>
+
+    <div >
+        <ul class="pagination" style="margin:20px 0">
+        {% if page_obj.has_previous %}
+           <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">previous</a></li>
+        {% endif %}
+
+        <li><span class="page-link" class="current-page">{{ page_obj.number }}</span></li>
+
+        {% if page_obj.has_next %}
+           <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">next</a></li>
+        {% endif %}
+        </ul>
+    </div>
+
+{% endblock %}
+
+
+
+{% comment %} {% extends 'page/base.html' %}
+
+{% block title %}News{% endblock %}
+{% block content %}
+    <ul>
+    {% for item in news %}
+        <li>
+            <h4><a href="{{ item.2 }}">{{ item.0 }}</a></h4>
+            <p>Point: {{ item.1 }}</p>
+            <p>Time: {{ item.3 }}</p>
+        </li>
+    {% endfor %}
+    </ul>
+{% endblock %} {% endcomment %}
+
+
+
+
