@@ -32,7 +32,7 @@ def create_table_from_csv(csv_file, table_name, db_file):
     conn.close()
 
 # Gọi hàm để tạo bảng và chèn dữ liệu từ file CSV
-csv_file = 'point_title.csv'  # Đường dẫn đến file CSV của bạn
+csv_file = 'point_title.csv'  # Đường dẫn đến file CSV 
 table_name = 'news'  # Tên bảng trong cơ sở dữ liệu
 db_file = 'database.db'  # Tên file cơ sở dữ liệu SQLite
 
